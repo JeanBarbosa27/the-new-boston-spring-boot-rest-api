@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API Docs | The New Boston</title>
+    <!-- TODO: Move it to a css file -->
+    <style>
+        main {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        table {
+            border-width: 1px;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        td, th {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+
+        <h1>The New Boston API Docs</h1>
+        <p>
+            This project was created following the series
+            <a href="https://www.youtube.com/playlist?list=PL6gx4Cwl9DGDPsneZWaOFg0H2wsundyGr" target="_blank">
+                Spring Boot with Kotlin & JUnit 5
+            </a>
+            on YouTube, from <a href="https://www.youtube.com/@thenewboston" target="_blank">thenewboston channel</a> .
+        </p>
+        <p>
+            Here you can see the list of endpoints available from this project, and all of them are under
+            <strong>/api</strong> route and it's following the RESTFul principles.
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Route</th>
+                    <th>Params</th>
+                    <th>Description</th>
+                    <th>Expected response</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <a href="/api/hello">/api/hello</a>
+                    </td>
+                    <td>
+                        None
+                    </td>
+                    <td>
+                        It's a simple Hello World example, just following the tutorial apart, but it will become the
+                        health check endpoint on a future refactoring.
+                    </td>
+                    <td>
+                        A text with the setence:
+                        <strong>Hello World from Spring Boot! Now the curse had been broken.</strong>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
