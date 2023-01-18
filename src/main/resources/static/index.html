@@ -10,14 +10,21 @@
             margin: 0 auto;
         }
 
+        table, th, td {
+            border: 1px solid #cccccc;
+        }
+
         table {
-            border-width: 1px;
             border-collapse: collapse;
             border-spacing: 0;
         }
 
         td, th {
             padding: 5px;
+        }
+
+        iframe {
+            width: 100%;
         }
     </style>
 </head>
@@ -39,6 +46,7 @@
         <table>
             <thead>
                 <tr>
+                    <th>Type</th>
                     <th>Route</th>
                     <th>Params</th>
                     <th>Description</th>
@@ -47,6 +55,9 @@
             </thead>
             <tbody>
                 <tr>
+                    <td>
+                        <strong>GET</strong>
+                    </td>
                     <td>
                         <a href="/api/hello">/api/hello</a>
                     </td>
@@ -60,6 +71,23 @@
                     <td>
                         A text with the setence:
                         <strong>Hello World from Spring Boot! Now the curse had been broken.</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>GET</strong>
+                    </td>
+                    <td>
+                        <a href="/api/banks">/api/banks</a>
+                    </td>
+                    <td>
+                        None
+                    </td>
+                    <td>
+                        It lists all registered banks.
+                    </td>
+                    <td>
+                        <iframe src="/api/banks" frameborder="0"></iframe>
                     </td>
                 </tr>
             </tbody>
