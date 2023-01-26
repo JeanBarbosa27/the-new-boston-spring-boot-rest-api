@@ -115,7 +115,7 @@
                         <strong>POST</strong>
                     </td>
                     <td>
-                        <a href="/api/banks">/api/banks</a>
+                        <em>/api/banks</em>
                     </td>
                     <td>
                         Must send a body with the following json structure: <br />
@@ -124,12 +124,59 @@
                     <td>
                         It creates a new bank with the given properties passed in the body. If is passed an
                         <strong>accountNumber</strong> that already exists it will return the message:
-                        <strong>Bank with account number <em>{accountNumber}</em> already exists.</strong> and the
+                        <strong>Bank with account number <em>{accountNumber}</em> already exists</strong> and the
                         status <strong>400</strong>. This status is also sent if an invalid json is given.
                     </td>
                     <td>
                         It will return the same body that was passed.
                         <iframe src="/api/banks/0001" frameborder="0"></iframe>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>PATCH</strong>
+                    </td>
+                    <td>
+                        <em>/api/banks</em>
+                    </td>
+                    <td>
+                        Must send a body with the following json structure: <br />
+                        <iframe src="/api/banks/0001" frameborder="0"></iframe>
+                    </td>
+                    <td>
+                        It updates an exiting bank with the given properties passed in the body. If is passed an
+                        <strong>accountNumber</strong> that doesn't exist it will return the message:
+                        <strong>
+                            Couldn't update bank with account number <em>{accountNumber}</em>, because it doesn't exist
+                        </strong>
+                        and the status <strong>404</strong>.
+                    </td>
+                    <td>
+                        It will return the same body that was passed.
+                        <iframe src="/api/banks/0001" frameborder="0"></iframe>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>DELETE</strong>
+                    </td>
+                    <td>
+                        <em>/api/banks</em>
+                    </td>
+                    <td>
+                        Must send a resource path variable with the account number of the bank which want to delete.
+                    </td>
+                    <td>
+                        It deletes an exiting bank with the given account number passed in url with status
+                        <strong>204</strong>. If is passed an <strong>accountNumber</strong> that doesn't exist it will
+                        return the message:
+                        <strong>
+                            Couldn't delete bank with account number <em>{accountNumber}</em>, because it doesn't exist
+                        </strong>
+                        and the status <strong>404</strong>.
+                    </td>
+                    <td>
+                        It will return an empty content.
                     </td>
                 </tr>
             </tbody>
